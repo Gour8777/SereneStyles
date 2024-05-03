@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .nav1{
+            padding: 10px 17px;
+        }
+        #login{
+            width: 80px;
+        }
+        #search{
+            top: 2.9%;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header style="z-index: 2;">
+
+        <div id="salon"><img src="images/1057470.png" alt="Logo" class="logo" width="40px"></div>
+        <div class="nav1">
+            <h2 style="font-family:'Times New Roman', Times, serif;" id="heading">SereneStyles </h2>
+        </div>
+        <div class="nav1" id="categories">Categories
+            <ul class="submenu" id="submenu" style="font-family:unset; font-size:20px">
+                <li><a href="/skincare">Skin Care</a></li>
+                <li><a href="/haircare">Hair Care</a></li>
+                <li><a href="/colorcare">Hair Color</a></li>
+                <li><a href="">Makeup</a></li>
+                <li><a href="">Virtual Beauty Tools</a></li>
+                <li><a href="">Hairloss treatment</a></li>
+                <li><a href="">dandruff treatment</a></li>
+                <li><a href="">Amnicure</a></li>
+                <li><a href="">Boys hairCut</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="nav1"><input type="text" placeholder="Search Salon" style="outline: none;" id="input-box"
+                autocomplete="off">
+            <button><span class="material-icons" id="search">search</span></button>
+            <div id="searchOptions"></div>
+            <div id="label-not-found" style="font-size: 13px; display:none; z-index: 10;">Salon not found</div>
+        </div>
+        <div class="nav1"><a href="/salonbusiness">Salon Business</a></div>
+        <div class="nav1"><a href="#">shop Owner</a></div>
+        <div class="nav1" id="pager"><a href="/logout"><button id="login">Log Out</button></a></div>
+        <div class="nav1">
+          <label class="toggle-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        
+      </div>
+        
+      <div class="nav1" id="icons">
+        <a href="#" onclick="toggleProfilePopup()">
+            <span class="material-icons largeicons" style="font-size: 35px;">account_circle</span>
+        </a>
+        <div class="profile-popup" id="profilePopup">
+            <span id="username"><%= username %></span><br>
+            <span id="email"><%= gmail %></span><br>
+            <a href="/bookings" id="mybooking">My Bookings</a>
+        </div>
+       
+    </div>
+    
+</header>
+<main>
+    <div style="width: 100%;" id="bgg"> <a href="/loreal"><button id="trying">Try Free-></button></a></div>
+    <div id="imageheading">
+      <h2>Facilities like No where</h2>
+    </div>
+    <div id="imagescroller">
+      <div class="slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+          <li class="image-container"> <img src="images/photo1.jpg" alt="" width="250px" height="150px" id="hello"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo2.jpg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo3.jpeg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo4.jpeg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo5.jpeg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo6.jpeg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo7.jpeg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo8.png" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo9.jpg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="photo10.jpg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo10.jpg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+          <li class="image-container"> <img src="images/photo10.jpg" alt="" width="250px" height="150px"><span
+              class="image-description">Description 1</span></li>
+
+
+
+        </ul>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div id="salon-container">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>L'ORÉAL</h2>
+            </div>
+            <img src="images/salon1.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <a href="/loreal" class="enter-link">Enter</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>Kevin Murphy</h2>
+            </div>
+            <img src="images/salon2.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <a href="" class="enter-link">Enter</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>Hair Haven</h2>
+            </div>
+            <img src="images/salon3.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <a href="#" class="enter-link">Enter</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>The Hair Hub</h2>
+            </div>
+            <img src="images/salon4.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <a href="#" class="enter-link">Enter</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>Beauty Bar</h2>
+            </div>
+            <img src="images/salon5.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <a href="#" class="enter-link">Enter</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div>
+              <h2>Chi Salon</h2>
+            </div>
+            <img src="images/salon6.jpg" alt="" id="a121">
+          </div>
+          <div class="flip-box-back">
+            <h4 class="type">Unisex</h4>
+            <h5 class="desc">Description</h5>
+            <p class="dpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus assumenda. Nam eius
+              maiores quo nostrum consequuntur suscipit quidem dolores, molestias inventore quas hic quisquam? Similique
+              dignissimos ab natus sunt.</p>
+            <h4 class="address">Address:</h4>
+            <a href="https://maps.app.goo.gl/eLhdQWi3cqXomgMs8" target="_blank" class="addlink">
+              <p class=" apara"><img src="images/684809.png" alt="" width="25px"> Bengaluru</p>
+            </a>
+            <div class="enter-link"><a href="/loreal" id="chi">Enter</a></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <footer>
+    <div class="footer">
+      <a href=""><img src="images/1057470.png" alt="Logo" class="logo"></a>
+
+      <div class="flexfooter">
+        <div class="link">
+          <div class="fact"><a href="/ourstory">Our Story</a></div>
+          <div class="fact"><a href="#">Shop</a></div>
+          <div class="fact"><a href="#">Bridal</a></div>
+          <div class="fact"><a href="#">Institute</a></div>
+          <div class="fact"><a href="#">Contact</a></div>
+        </div>
+        <div class="link">
+          <div class="fact1"><a href="#">Gift Cards</a></div>
+          <div class="fact1"><a href="#">Career</a></div>
+          <div class="fact1"><a href="#">Franchise</a></div>
+          <div class="fact1"><a href="#">Blog</a></div>
+          <div class="fact1"><a href="#">Find a Salon</a></div>
+        </div>
+        <div class="link" id="handle">
+          <div><a href="https://www.instagram.com/gourav_agarwal9_?utm_source=qr" target="_blank"><img
+                src="images/instagram.jpg" alt="Instagram" class="icon"></a></div>
+          <div><a href="" _blank><img src="images/facebook.png" alt="Facebook" class="icon"></a></div>
+          <div><a href="" _blank><img src="images/twitter.png" alt="YouTube" class="icon"></a></div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="js/jquery.hislide.js"></script>
+  <script> $('.slide').hiSlide();</script>
+  <script src="/js/func.js"></script>
+</body>
+
+</html>

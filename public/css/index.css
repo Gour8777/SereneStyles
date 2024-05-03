@@ -1,0 +1,669 @@
+/* header and background */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(250, 250, 250);
+
+}
+
+header {
+    
+    z-index: 500;
+    display: flex;
+    width: 100%;
+    background-color: rgb(234, 233, 233);
+    font-size: 24px;
+
+
+
+}
+#heading{
+    cursor: pointer;
+}
+.nav1 {
+    width: auto;
+    padding: 15px 13px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#signup {
+    padding: 10px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+
+}
+
+#login {
+    padding: 10px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+input[type="text"] {
+
+    border: 1px solid #f7f6f6;
+
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px 5px 0px 0px;
+    padding-left: 10px;
+}
+
+#search {
+    position: absolute;
+    top: 3.5%;
+    left: 742px;
+    cursor: pointer;
+
+}
+
+#search:hover {
+    background-color: gray;
+
+}
+
+::placeholder {
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.logo {
+    width: 55px;
+}
+
+#salon {
+    padding: 15px 0px 5px 20px;
+}
+
+#icons {
+    padding-top: 20px;
+}
+
+#bgg {
+    
+    padding-left: 200px;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#trying {
+    margin-top: 450px;
+    
+    padding: 15px;
+    background-color: wheat;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s;
+
+}
+
+#categories {
+    cursor: pointer;
+    padding: 0px;
+    margin: 15px 17px;
+}
+
+#submenu {
+    position: absolute;
+    display: none;
+   
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#submenu li {
+    list-style-type: none;
+  
+    transition: all 0.3s;
+    padding: 5px 10px;
+}
+
+#submenu li:hover {
+    background-color: rgb(196, 225, 240);
+    border-radius: 10px;
+    
+}
+
+#trying:hover {
+    transform: scale(1.05);
+}
+
+
+.nav1 input {
+    border: .2px solid gray;
+    box-shadow: 0px 0px 2px;
+}
+
+/* search bar*/
+#searchOptions {
+    
+    background-color: aliceblue;
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0px 0px 4px;
+    border-radius: 0px 0px 5px 5px;
+
+
+}
+
+#searchOptions ul li {
+    list-style-type: none;
+    width: 100%;
+    padding: 4px;
+    font-size: 15px;
+}
+
+#searchOptions ul li:hover {
+    background-color: rgb(196, 225, 240);
+}
+
+
+
+
+
+
+
+/* header and background ends here*/
+/* photo scroller*/
+.hi-slide {
+    position: relative;
+    width: 754px;
+    height: 292px;
+    border-radius: 50px;
+    margin: 11px auto 0px;
+    margin-bottom: 100px;
+    padding: 30px;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 0.7s;
+    font-weight: bold;
+
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: rgb(235, 124, 124);
+
+}
+
+.hi-slide .hi-prev {
+    left: -59px;
+}
+
+.hi-slide .hi-prev::before {
+    content: '\003C';
+    /* Content code for "<" */
+}
+
+.hi-slide .hi-next::before {
+    content: '\203A';
+    /* Unicode for right-pointing single angle quotation mark */
+}
+
+.hi-slide .hi-next {
+    right: -110px;
+}
+
+.hi-slide .hi-next::before {
+    content: '>';
+}
+
+.hi-slide>ul {
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hi-slide>ul>li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 147px;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.hi-slide>ul>li>img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+
+
+.image-container {
+    position: relative;
+}
+
+.image-description {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.image-container:hover img {
+    z-index: 1;
+}
+
+.image-container:hover .image-description {
+    display: block;
+    z-index: 2;
+}
+
+.image-container img {
+    position: relative;
+    z-index: 0;
+}
+
+/* Additional styles for the line */
+.image-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    /* Adjust as needed */
+    height: 2px;
+    /* Adjust as needed */
+    background-color: black;
+    /* Color of the line */
+    z-index: -1;
+}
+
+
+#imagescroller {
+  background: linear-gradient(45deg,#d2001a,#7462ff,rgb(106, 143, 175),rgb(119, 119, 213) ,rgb(42, 181, 199));
+  background-size: 300% 300%;
+  animation: color 10s ease-in-out infinite;
+    width: 100%;
+    height: 50vh;
+    border-radius: 30px;
+   
+    margin-bottom: 40px;
+
+
+
+
+
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+#imageheading {
+    text-align: center;
+    margin-top: 100px;
+    font-family: cursive;
+    font-size: 30px;
+    color:transparent;
+    -webkit-text-stroke:1px #fff;
+    
+    background: url(/images/instagram.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+
+
+}
+@keyframe back{
+    100%{
+        background-position:2000px 0;
+    }
+}
+
+/* for footer*/
+#fimage {
+    margin: 10px;
+}
+
+footer {
+    background-color: rgb(47, 47, 47);
+    color: #f7f6f6;
+    display: flex;
+}
+
+
+
+
+
+
+
+.footer .icon {
+    width: 25px;
+    margin: 10px 25px;
+
+}
+
+.footer .logo {
+    align-items: center;
+    width: 50px;
+    margin: 15px 30px;
+}
+
+.flexfooter {
+    display: flex;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+.flexfooter .link {
+    margin-right: 50px;
+}
+
+.fact a,
+.fact1 a {
+    color: #f7f6f6;
+}
+
+.fact,
+.fact1 {
+    margin-bottom: 5px;
+}
+
+#handle {
+    display: flex;
+    margin-left: 50px;
+}
+
+/* salons list*/
+.flip-box {
+    width: 30vw;
+    height: 50vh;
+    perspective: 800px;
+    cursor: pointer;
+    margin: 20px;
+    margin-bottom: 90px;
+    border-radius: 10px;
+
+
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 52px;
+
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+.flip-box-front {
+    text-align: center;
+}
+
+#a121 {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.flip-box-front {
+    color: black;
+
+}
+
+.flip-box-back {
+    background-color: rgb(234, 231, 231);
+    color: black;
+    transform: rotateY(180deg);
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+#salon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.type,
+.desc,
+.address {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.type {
+    text-align: center;
+}
+
+.dpara {
+    padding-left: 20px;
+}
+
+.apara {
+    padding-left: 20px;
+    text-decoration-line: underline;
+    color: blue;
+}
+
+.enter-link {
+    display: grid;
+    text-align: center;
+    padding: 10px;
+    background-color: aqua;
+    width: auto;
+    margin-top:30px;
+    transition: all 0.5s;
+
+
+}
+
+.enter-link:hover {
+    background-color: rgb(2, 213, 213);
+
+
+}
+
+/* salom list ends here*/
+
+/* Add other dark mode styles here */
+/* Toggle switch container */
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+
+/* Slider button */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 15px; /* Adjusted to match the toggle switch */
+    transition: transform 0.4s; /* Changed property for animation */
+}
+
+/* Checked state of the toggle switch */
+
+
+/* Hidden checkbox input */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Dark mode styles */
+.dark-mode .toggle-switch {
+    background-color: #333; /* Background color for dark mode */
+}
+
+.dark-mode .slider {
+    background-color: #fff; /* Slider color for dark mode */
+}
+
+/* Circle inside the toggle switch */
+.slider::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color:gray; /* Circle color */
+    border-radius: 50%;
+    transition: transform 0.4s; /* Changed property for animation */
+}
+
+input:checked + .slider::before {
+    transform: translateX(25px); 
+    background-color: #333;
+}
+
+  /* Dark mode styles */
+.dark-mode {
+    background-color:rgb(14, 13, 13);
+    color:rgb(222, 222, 222);
+}
+.dark-mode a{
+   
+    color: rgb(222, 222, 222);
+}
+   
+.dark-mode header{
+    background-color:#222222;
+    color: rgb(222, 222, 222);
+}
+.dark-mode #submenu{
+    background-color: #222222;
+    color:rgb(222, 222, 222);
+}
+.dark-mode #searchOptions {
+    background-color: #222222;
+    color:rgb(222, 222, 222);
+
+}
+.dark-mode h2{
+    color: rgb(222, 222, 222);
+}
+.dark-mode #submenu li:hover{
+    background-color: gray;
+}
+.dark-mode #searchOptions ul li:hover{
+    background-color: gray;
+}
+.dark-mode .enter-link{
+    color: #222222;
+}
+.dark-mode .profile-popup{
+    background-color: #222222;
+}
+.dark-mode #chi{
+    color: #222222;
+}
+/* Add other dark mode styles here */
+.profile-popup {
+    display: none;
+    position: absolute;
+    top: 60px;
+    border-radius: 10px;
+    font-size: 15px;
+    right: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    z-index: 1;
+    margin-right: 10px;
+    z-index: 1000;
+}
+
+ .profile-popup.active {
+    display: block;
+} 
+#mybooking{
+    text-decoration: underline;
+    color: #7462ff;
+    font-weight: bold;
+}

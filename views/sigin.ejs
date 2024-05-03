@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(signup\ image.jpg);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+
+
+        }
+
+        #home {
+            color: black;
+            size: 20px;
+        }
+
+        .signup-container {
+            background-color: #f3f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(171, 167, 167, 0.1);
+            width: 300px;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            padding-right: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-group input:focus{
+            outline: none;
+            border-color: blue;
+            box-shadow: 0 0 1px blue;
+        }
+
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg,skyblue,blue);
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 6px;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .already-user {
+            text-align: center;
+        }
+
+        .already-user a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .already-user a:hover {
+            text-decoration: underline;
+        }
+        #google_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000; 
+        }
+        .goog-te-gadget {
+            background: linear-gradient(45deg,skyblue,blue);
+ 
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Custom styling for Google Translate dropdown */
+        .goog-te-menu-value,
+        .goog-te-menu-item {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            color: #333;
+            padding: 6px 10px;
+        }
+
+        .goog-te-menu-value:hover,
+        .goog-te-menu-item:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        #messages{
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    
+    <div id="google_element"></div>
+    <header>
+        <a href="<%= homeUrl %>" id="home"><span class="material-icons">home</span></a>
+    </header>
+   
+    <div class="signup-container">
+        <% if (message) { %>
+            <p id="messages"><%= message %></p>
+        <% } %>
+        <h2>Sign In</h2>
+        <form action="/sigin" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+        <div class="already-user">
+            <p>New User? <a href="/signup">Create an account</a></p>
+        </div>
+    </div>
+
+   
+   
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+        }
+    </script>
+</body>
+
+</html>

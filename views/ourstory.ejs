@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Image Half Points</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            margin: 010px;
+            padding: 0;
+            font-family: Arial, sans-serif;
+       
+         
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .container {
+            
+            max-width: 1200px;
+            position: relative;
+        
+            /* Set max-width to match the image width */
+           
+        }
+
+        .image-container {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .points-container {
+           
+          
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+             /* Adjust top position to start from 800px */
+            top: -100px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+        margin-left: 28%;
+      
+            width: 850px;
+            box-shadow: 0px 0px 1px gray;
+            border-radius: 30px;
+           
+           
+        }
+
+       
+        ul {
+            padding: 5px;
+            /* Use disc type for circular bullets */
+            padding-left: 30px;
+            /* Add some indentation */
+
+        }
+        footer{
+            margin-top: 50px;
+            position:relative;
+        }
+        li{
+            padding-left: 10px;
+            padding: 9px;
+        }
+ol{
+    padding-left: 10px;
+}
+span{
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="<%= homeUrl %>" id="home"><span class="material-icons">home</span></a>
+    </header>
+    <div class="container">
+       
+            <img src="images/trio.jpg" alt="Your Imaaaaage" width=1500px height="600px"  
+         
+            display: block;>
+            
+      
+        <div class="points-container">
+            <h2>OUR STORY</h2>
+            <ul >
+                <li>
+                    Picture a group of determined engineering students, their passion for innovation burning bright. Among them are <span>Gourav Agarwal,Meet Jain, Aishwary Anand</span>, each bringing unique skills to the table. They share a dream: to create something impactful, something that goes beyond grades and exams.</li>
+                <li>Days turn into weeks, and setbacks test their resolve. They encounter bugs that seem insurmountable, design dilemmas that demand creative solutions, and data challenges that push the limits of their knowledge. Yet, they press on, fueled by their collective determination and belief in their project's potential.
+
+                   <li> Finally, after countless all-nighters and brainstorming sessions, they unveil their masterpiece: a sleek, user-friendly website that seamlessly connects users with nearby salons. It's not just a directory; it's a testament to their hard work, perseverance, and collaborative spirit.</li></li>
+                <li>Their website goes live, and the response is overwhelming. Salons and users alike flock to it, impressed by its functionality and elegance. Alex, Maya, and Ryan smile as they see their labor of love making a real impact, bringing convenience and joy to countless people.</li>
+           <li>Their story isn't just about building a website; it's about the journey of growth, friendship, and grit. They may be engineering students by day, but by night, they're creators, dreamers, and architects of change.</li>
+            <ul>
+        </div>
+        
+    </div>
+    <footer>
+        <div class="footer">
+          <a href=""><img src="images/1057470.png" alt="Logo" class="logo"></a>
+    
+          <div class="flexfooter">
+            <div class="link">
+                <div class="fact"><a href="/ourstory">Our Story</a></div>
+              <div class="fact"><a href="#">Shop</a></div>
+              <div class="fact"><a href="#">Bridal</a></div>
+              <div class="fact"><a href="#">Institute</a></div>
+              <div class="fact"><a href="#">Contact</a></div>
+            </div>
+            <div class="link">
+              <div class="fact1"><a href="#">Gift Cards</a></div>
+              <div class="fact1"><a href="#">Career</a></div>
+              <div class="fact1"><a href="#">Franchise</a></div>
+              <div class="fact1"><a href="#">Blog</a></div>
+              <div class="fact1"><a href="#">Find a Salon</a></div>
+            </div>
+            <div class="link" id="handle">
+              <div><a href="https://www.instagram.com/gourav_agarwal9_?utm_source=qr" target="_blank"><img
+                    src="images/instagram.jpg" alt="Instagram" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/facebook.png" alt="Facebook" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/twitter.png" alt="YouTube" class="icon"></a></div>
+            </div>
+    
+    
+    
+          </div>
+        </div>
+      </footer>
+</body>
+
+
+</html>

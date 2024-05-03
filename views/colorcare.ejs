@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Image Half Points</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            margin: 010px;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .container {
+
+            max-width: 1200px;
+            position: relative;
+
+            /* Set max-width to match the image width */
+
+        }
+
+        .image-container {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .points-container {
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top:-100px;
+            /* Adjust top position to start from 800px */
+
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Semi-transparent white background */
+            padding: 20px;
+            margin-left: 25%;
+
+            width: 850px;
+            ;
+            border-radius: 20px;
+        }
+
+
+        ul {
+
+            /* Use disc type for circular bullets */
+            padding-left: 20px;
+            /* Add some indentation */
+        }
+        footer{
+            margin-top: 50px;
+            position:relative;
+        }
+        li{
+            padding-left: 10px;
+            padding: 6px;
+        }
+ol{
+    padding-left: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="<%= homeUrl %>" id="home"><span class="material-icons">home</span></a>
+    </header>
+    <div class="container">
+
+        <img src="images/colorcare1.jpg" alt="Your Imaaaaage" width=1500px height="600px" display: block;>
+
+
+        <div class="points-container">
+            <h2>Hair Care FAQ's</h2>
+            <ol>
+                <li>
+                    <h4>  How often should I color my hair?</h4>
+                    <ul>      The frequency of hair coloring depends on the type of color treatment you're using and how quickly your hair grows. Permanent hair color typically needs to be touched up every 4-6 weeks to cover root regrowth, while semi-permanent or demi-permanent color may last 6-8 weeks before needing a touch-up.
+                        </ul>
+                </li>
+
+                <li>
+                    <h4>Is it safe to color my hair at home?</h4>
+                    <ul> Coloring your hair at home can be safe and effective if you follow the instructions carefully and choose a high-quality hair color product. It's essential to perform a patch test before applying color to check for any allergic reactions and to protect your skin and clothing from staining.</ul>
+                </li>
+
+                <li>
+                    <h4>How do I choose the right hair color for me?</h4>
+                    <ul>Consider factors such as your skin tone, natural hair color, and personal preferences when choosing a hair color. Warm tones like golden blonde or chestnut brown complement warm skin tones, while cool tones like ash blonde or cool brown suit cooler skin tones. Consulting with a professional colorist can also help you find the perfect shade.</ul>
+                   
+                </li>
+                <li>
+                    <h4>    How can I maintain my hair color and prevent fading?</h4>
+                    <ul> Use color-safe shampoo and conditioner specifically formulated for color-treated hair to maintain vibrancy and prevent premature fading.</ul>
+                    <ul>Minimize exposure to UV rays by wearing hats or using hair products with UV protection when spending time outdoors.</ul>
+                    <ul> 
+                        Avoid hot water and excessive heat styling, which can strip color molecules from the hair shaft and cause fading.</ul>
+                </li>
+
+                <li>
+                    <h4>Can I lighten my hair without bleach?</h4>
+                    <ul>   
+                        While bleach is typically required to achieve significant lightening results, there are alternative methods like highlighting or using high-lift hair color that can lighten your hair without the need for bleach. However, these methods may not be as effective on dark hair or may require multiple sessions to achieve the desired results.</ul>
+                   
+                </li>
+            </ol>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer">
+          <a href=""><img src="images/1057470.png" alt="Logo" class="logo"></a>
+    
+          <div class="flexfooter">
+            <div class="link">
+                <div class="fact"><a href="/ourstory">Our Story</a></div>
+              <div class="fact"><a href="#">Shop</a></div>
+              <div class="fact"><a href="#">Bridal</a></div>
+              <div class="fact"><a href="#">Institute</a></div>
+              <div class="fact"><a href="#">Contact</a></div>
+            </div>
+            <div class="link">
+              <div class="fact1"><a href="#">Gift Cards</a></div>
+              <div class="fact1"><a href="#">Career</a></div>
+              <div class="fact1"><a href="#">Franchise</a></div>
+              <div class="fact1"><a href="#">Blog</a></div>
+              <div class="fact1"><a href="#">Find a Salon</a></div>
+            </div>
+            <div class="link" id="handle">
+              <div><a href="https://www.instagram.com/gourav_agarwal9_?utm_source=qr" target="_blank"><img
+                    src="images/instagram.jpg" alt="Instagram" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/facebook.png" alt="Facebook" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/twitter.png" alt="YouTube" class="icon"></a></div>
+            </div>
+    
+    
+    
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>

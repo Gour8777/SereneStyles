@@ -1,0 +1,131 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url(/images/Anushka.jpeg);
+   
+}
+#salonname{
+    font-size: 50px;
+    color: rgb(26, 26, 26);
+    margin-top: 0px;
+    padding-top: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#salonsubname{
+    margin-top: 0px;
+    text-align: center;
+}
+#navbar{
+    display: flex;
+    float: right;
+    margin-right: 40px;
+    
+
+}
+.navv{
+    padding: 10px 10px 10px 10px;
+    margin:10px  10px;
+    font-size: 20px;
+    transition: all 0.3s;
+
+}
+.navv:hover{
+    background: linear-gradient(45deg,skyblue,rgb(225, 142, 142));
+    border-radius: 4px;
+  
+   
+}
+.navv a{
+    text-decoration-line: none;
+    
+}
+
+#head{
+    
+    height:170px;
+}
+#head:hover{
+    background: linear-gradient(45deg,rgb(225, 142, 142),skyblue);
+}
+#booking{
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg,skyblue,rgb(225, 142, 142));
+    margin-left: 200px;
+    margin-top: 450px;
+    border-radius: 10px;
+    font-family: cursive;
+    transition: all .3s;
+    box-shadow: 1px 1px 0px 0px ;
+}
+#booking:hover{
+    background: linear-gradient(45deg,rgb(94, 152, 174),rgb(228, 138, 138));
+    transform: scale(1.02);
+}
+.container {
+    width: 30%;
+    margin-top: 5vh;
+    float: right;
+    margin-right: -10%;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+   
+    display: none;
+}
+
+
+
+
+input[type="text"],
+textarea,select,input[type="tel"],input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: .8;
+}
+
+
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+select {
+    width: 100%;
+}
+
+.btn-submit {
+    background-color: orange;
+    color: #fff;
+    width: 80px;
+    padding: 10px 15px;
+    border: none;
+   
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+#datetime,input[type="radio"]{
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+::placeholder{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    
+}

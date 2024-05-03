@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Salon Business Details</title>
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      
+      form input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease;
+      }
+      
+      form input:focus {
+        border-color: #007bff;
+      }
+      
+      .btn-submit{
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(45deg,skyblue,blue);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn-submit:hover {
+        background-color: #0056b3;
+      }
+      
+      #message {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+        color: #007bff;
+        font-weight: bold;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+
+
+    }#home {
+      color: black;
+      size: 20px;
+  }
+      
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="<%= homeUrl %>" id="home"><span class="material-icons">home</span></a>
+</header>
+  <div class="container">
+    <h1>Salon Business Details</h1>
+    <form id="salonForm"  action="/salonbusiness" method="post">
+        <label for="ownername">Owner Name:</label>
+      <input type="text" id="ownername" required name="ownername"><br>
+      <label for="salonName">Salon Name:</label>
+      <input type="text" id="salonname" required name="salonname"><br>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" required name="city"><br>
+      
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required pattern="[0-9]{10}" name="phone"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required name="email"><br>
+
+      <input type="submit" value="Submit" class="btn-submit">
+    </form>
+    <% if (message) { %>
+        <p id="message"><%= message %></p>
+    <% } %>
+
+    
+   
+  </div>
+
+ 
+</body>
+
+</html>

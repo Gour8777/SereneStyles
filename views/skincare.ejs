@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Image Half Points</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            margin: 010px;
+            padding: 0;
+            font-family: Arial, sans-serif;
+       
+         
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .container {
+            
+            max-width: 1200px;
+            position: relative;
+        
+            /* Set max-width to match the image width */
+           
+        }
+
+        .image-container {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .points-container {
+           
+          
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+             /* Adjust top position to start from 800px */
+            top: -100px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+        margin-left: 28%;
+      
+            width: 850px;
+            box-shadow: 0px 0px 1px gray;
+            border-radius: 30px;
+           
+           
+        }
+
+       
+        ul {
+            padding: 5px;
+            /* Use disc type for circular bullets */
+            padding-left: 30px;
+            /* Add some indentation */
+
+        }
+        footer{
+            margin-top: 50px;
+            position:relative;
+        }
+        li{
+            padding-left: 10px;
+            padding: 6px;
+        }
+ol{
+    padding-left: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="<%= homeUrl %>" id="home"><span class="material-icons">home</span></a>
+    </header>
+    <div class="container">
+       
+            <img src="images/skincare1.jpg" alt="Your Imaaaaage" width=1500px height="600px"  
+         
+            display: block;>
+            
+      
+        <div class="points-container">
+            <h2>Skin Care FAQ's</h2>
+            <ol >
+                <li>
+                    <h4>How often should I wash my face?</h4>
+                    <ul ><li>Wash your face twice a day, in the morning and before bed, using a gentle cleanser suitable for
+                        your skin type.</li>
+                    <li>Avoid over-washing, as it can strip the skin of its natural oils and lead to dryness or
+                        irritation.</li></ul>
+                  
+                </li>
+                <li>
+                    <h4>Do I need to use sunscreen every day?</h4>
+                    <ul>
+                        <li>Yes, it's important to use sunscreen daily, even on cloudy days or during winter, as UV rays can penetrate through clouds and windows.</li>
+<li>Choose a broad-spectrum sunscreen with SPF 30 or higher and reapply every 2 hours when outdoors.</li>
+                    </ul>
+                    
+                </li>
+                <li>
+                  <h4>How do I choose the right moisturizer for my skin?</h4>
+                    <ul><li>Consider your skin type: oily, dry, combination, or sensitive..</li>
+                    <li>For oily skin, choose oil-free or gel-based moisturizers.</li>
+                    <li>For dry skin, opt for richer, creamier formulas with hydrating ingredients like hyaluronic acid or glycerin.</li>
+                    </ul>
+                    
+                </li>
+                <li>
+                    <h4>What is the best way to treat acne?</h4>
+                    <ul>
+                        <li>Get enough sleep and practice good sleep hygiene to prevent tired-looking eyes.</li>
+                    <li>Apply cold compresses or chilled cucumber slices to reduce puffiness.</li>
+                    </ul>
+                    
+                </li>
+            </ol>
+        </div>
+        
+    </div>
+    <footer>
+        <div class="footer">
+          <a href=""><img src="images/1057470.png" alt="Logo" class="logo"></a>
+    
+          <div class="flexfooter">
+            <div class="link">
+                <div class="fact"><a href="/ourstory">Our Story</a></div>
+              <div class="fact"><a href="#">Shop</a></div>
+              <div class="fact"><a href="#">Bridal</a></div>
+              <div class="fact"><a href="#">Institute</a></div>
+              <div class="fact"><a href="#">Contact</a></div>
+            </div>
+            <div class="link">
+              <div class="fact1"><a href="#">Gift Cards</a></div>
+              <div class="fact1"><a href="#">Career</a></div>
+              <div class="fact1"><a href="#">Franchise</a></div>
+              <div class="fact1"><a href="#">Blog</a></div>
+              <div class="fact1"><a href="#">Find a Salon</a></div>
+            </div>
+            <div class="link" id="handle">
+              <div><a href="https://www.instagram.com/gourav_agarwal9_?utm_source=qr" target="_blank"><img
+                    src="images/instagram.jpg" alt="Instagram" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/facebook.png" alt="Facebook" class="icon"></a></div>
+              <div><a href="" _blank><img src="images/twitter.png" alt="YouTube" class="icon"></a></div>
+            </div>
+    
+    
+    
+          </div>
+        </div>
+      </footer>
+</body>
+
+
+</html>

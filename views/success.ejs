@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .btn-home {
+            display: block;
+            width: 120px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-home:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><%= message1 %></h1>
+        <p><%= message %></p>
+        <a href="<%= homeUrl %>" class="btn-home">Go to Home</a>
+    </div>
+
+    <script>
+        // Set a flag in session storage when the page loads
+sessionStorage.setItem('disableBack', 'true');
+
+// Check the flag when the page loads
+window.onload = function () {
+  if (sessionStorage.getItem('disableBack')) {
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+    };
+  }
+};
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+           
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+           
+            
+        }
+        #home{
+            color: black;
+            size: 20px;
+        }
+        
+
+        .signup-container {
+            background-color: #f3f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(171, 167, 167, 0.1);
+            width: 25vw;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+           padding-right: 10 px 0px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: calc(100% - 16px); /* Adjusted width to accommodate padding */
+            padding: 8px 8px; /* Modified padding */
+            border-radius: 5px;
+            border: 1px solid gray;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box; /* Ensures padding is included in the width calculation */
+        }
+        
+        .form-group input:focus {
+            border-color: #007bff; /* Blue color when focused */
+            box-shadow: 0px 0px 1px blue;
+            outline: none;
+
+        }
+        
+
+        .form-group input[type="submit"] {
+            width: 24vw;
+            padding: 10px 10px;
+            background: linear-gradient(60deg,skyblue,blue);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 2px;
+           
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .already-user {
+            text-align: center;
+        }
+
+        .already-user a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .already-user a:hover {
+            text-decoration: underline;
+        }
+        #message{
+            display: none;
+
+        }
+        #butt.disabled{
+            opacity: 0.5; /* Dim the button */
+           pointer-events: none; /* Disable pointer events */
+           cursor: not-allowed;
+        }
+        #showPasswordToggle{
+           cursor: pointer;
+           position: absolute;
+           display: none;
+           top: 58%;
+           right: 625px;
+           
+        }
+        #showPasswordToggle.when{
+            top:58.5%;
+            left: 59.5%;
+           
+        }
+        #showPasswordToggle.strong{
+            top:58.5%;
+            left: 59.5%;
+        }
+        #showPasswordToggle.enable{
+            display:block;
+        }
+        #messages{
+            text-align: center;
+            color: rgb(87, 87, 184);
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/" id="home"><span class="material-icons">home</span></a>
+    </header>
+
+    <div class="signup-container">
+        <% if (message) { %>
+            <p id="messages"><%= message %></p>
+        <% } %>
+        <h2>Sign Up</h2>
+        <form action="/sign" method="post" id="signupform">
+            <div class="form-group">
+                <div class="form-group"><label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <div class="form-group"><label for="name">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group" id="pass">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="show-password-icon material-icons" id="showPasswordToggle">visibility_off</span>
+                <p id="message">Password is <span id="strength"></span></p>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="butt" value="Sign Up" name="sumbit">
+            </div>
+        </form>
+        <div class="already-user">
+            <p>Already a user? <a href="/sigin">Log in here</a></p>
+        </div>
+        
+        
+
+
+
+
+    <script>
+        var pass=document.getElementById("password");
+        var msg=document.getElementById("message");
+        var str=document.getElementById("strength");
+        var but=document.getElementById("butt");
+        var eye=document.getElementById("showPasswordToggle");
+        pass.addEventListener("input",()=>{
+            if(pass.value.length>0){
+                msg.style.display="block";
+                eye.style.display="block";
+            }
+            else{
+                msg.style.display="none";
+                eye.style.display="none";
+                
+                
+                
+                
+                
+            }
+            if(pass.value.length<4){
+                str.innerHTML="weak,must be more than 8 character";
+                msg.style.color="red"
+                str.style.color="red";
+                butt.classList.add("disabled");
+                eye.classList.remove("strong");
+                eye.classList.add("when");
+                
+                
+                
+            }
+            else if(pass.value.length>=4 && pass.value.length<8){
+                str.innerHTML="medium,must be more than 8 character";
+                msg.style.color="red"
+                str.style.color="red";
+                butt.classList.add("disabled");
+                eye.classList.remove("strong");
+                eye.classList.add("when");
+                
+            }
+            else if(pass.value.length>=8){
+                str.innerHTML="strong";
+                msg.style.color="black"
+                str.style.color="black";
+                butt.classList.remove("disabled");
+                eye.classList.remove("when");
+                eye.classList.add("strong");
+
+                
+            }
+        });
+
+        showPasswordToggle.addEventListener("click", function() {
+            if (pass.type === "password") {
+                pass.type = "text";
+                showPasswordToggle.textContent = "visibility";
+            } else {
+                pass.type = "password";
+                showPasswordToggle.textContent = "visibility_off";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
